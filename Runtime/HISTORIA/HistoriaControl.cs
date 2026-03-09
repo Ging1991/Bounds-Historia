@@ -7,6 +7,7 @@ using Bounds.Dialogos;
 using Bounds.Persistencia;
 using Bounds.Persistencia.Parametros;
 using Bounds.Modulos.Persistencia;
+using Bounds.Musica;
 
 namespace Bounds.Historia {
 

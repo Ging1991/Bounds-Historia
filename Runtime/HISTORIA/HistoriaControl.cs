@@ -8,6 +8,7 @@ using Bounds.Persistencia;
 using Bounds.Persistencia.Parametros;
 using Bounds.Modulos.Persistencia;
 using Bounds.Musica;
+using Bounds.Entrenamiento;
 
 namespace Bounds.Historia {
 
@@ -17,8 +18,10 @@ namespace Bounds.Historia {
 		private Configuracion configuracion;
 		public ParametrosControl parametrosControl;
 		public MusicaDeFondo musicaDeFondo;
+		public PersonalizarUI personalizarUI;
 
 		void Start() {
+			personalizarUI.Personalizar();
 			parametrosControl.Inicializar();
 			ParametrosEscena parametros = parametrosControl.parametros;
 			configuracion = new(parametros.direcciones["CONFIGURACION"]);

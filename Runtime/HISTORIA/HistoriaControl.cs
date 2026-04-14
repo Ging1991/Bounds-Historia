@@ -6,9 +6,7 @@ using Ging1991.Persistencia.Direcciones;
 using Bounds.Dialogos;
 using Bounds.Persistencia;
 using Bounds.Persistencia.Parametros;
-using Bounds.Modulos.Persistencia;
 using Bounds.Musica;
-using Bounds.Entrenamiento;
 
 namespace Bounds.Historia {
 
@@ -18,12 +16,12 @@ namespace Bounds.Historia {
 		private Configuracion configuracion;
 		public ParametrosControl parametrosControl;
 		public MusicaDeFondo musicaDeFondo;
-		public PersonalizarUI personalizarUI;
+		public ControlUIBounds personalizarUI;
 
 		void Start() {
-			personalizarUI.Personalizar();
 			parametrosControl.Inicializar();
 			ParametrosEscena parametros = parametrosControl.parametros;
+			personalizarUI.Personalizar(parametros.direcciones["SISTEMA"], parametros.direcciones["COLORES"]);
 			configuracion = new(parametros.direcciones["CONFIGURACION"]);
 			musicaDeFondo.Inicializar(parametros.direcciones["MUSICA_TIENDA"]);
 

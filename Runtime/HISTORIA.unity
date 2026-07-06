@@ -214,17 +214,25 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4893539534636534681, guid: 5c7ac5d34c757ba4593c9d1ec573bafe, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893539534636534681, guid: 5c7ac5d34c757ba4593c9d1ec573bafe, type: 3}
+      propertyPath: m_Color.r
+      value: 0.23529412
+      objectReference: {fileID: 0}
     - target: {fileID: 6112068800939485571, guid: 5c7ac5d34c757ba4593c9d1ec573bafe, type: 3}
       propertyPath: m_Name
       value: CuadroDeDialogo
       objectReference: {fileID: 0}
     - target: {fileID: 7086442809789504861, guid: 5c7ac5d34c757ba4593c9d1ec573bafe, type: 3}
       propertyPath: m_Color.b
-      value: 0.43137255
+      value: 0.29411766
       objectReference: {fileID: 0}
     - target: {fileID: 7086442809789504861, guid: 5c7ac5d34c757ba4593c9d1ec573bafe, type: 3}
       propertyPath: m_Color.g
-      value: 0.43137255
+      value: 0.6862745
       objectReference: {fileID: 0}
     - target: {fileID: 7086442809789504861, guid: 5c7ac5d34c757ba4593c9d1ec573bafe, type: 3}
       propertyPath: m_Color.r

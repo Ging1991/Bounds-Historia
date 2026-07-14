@@ -25,7 +25,7 @@ namespace Bounds.Historia {
 			configuracion = new(parametros.direcciones["CONFIGURACION"]);
 			musicaDeFondo.Inicializar(parametros.direcciones["MUSICA_TIENDA"]);
 
-			DireccionRecursos direccion = new("HISTORIA", $"CAPITULO{configuracion.LeerCapituloHistoria()}");
+			DireccionRecursos direccion = new(parametros.direcciones["HISTORIA"], $"CAPITULO{configuracion.LeerCapituloHistoria()}");
 
 			LectorLista<AccionBounds> lector1 = new LectorLista<AccionBounds>(
 				direccion.Generar(),

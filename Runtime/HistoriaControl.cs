@@ -7,6 +7,7 @@ using Bounds.Dialogos;
 using Bounds.Persistencia;
 using Bounds.Persistencia.Parametros;
 using Bounds.Musica;
+using Ging1991.Musica;
 
 namespace Bounds.Historia {
 
@@ -15,15 +16,23 @@ namespace Bounds.Historia {
 		public Dialogo<AccionBounds> dialogo;
 		private Configuracion configuracion;
 		public ParametrosControl parametrosControl;
-		public MusicaDeFondo musicaDeFondo;
 		public ControlUIBounds personalizarUI;
+
+		private void InicializarMusica(string direccion) {
+			MusicaAmbiental musicaAmbiental = MusicaAmbiental.Instancia;
+			if (musicaAmbiental.actual != "GENERAL") {
+				musicaAmbiental.Inicializar(new ProveedorAudios(new DireccionRecursos(direccion)));
+				musicaAmbiental.Reproducir("GENERAL");
+			}
+		}
+
 
 		void Start() {
 			parametrosControl.Inicializar();
 			ParametrosEscena parametros = parametrosControl.parametros;
+			InicializarMusica(parametros.direcciones["MUSICA_AMBIENTAL"]);
 			personalizarUI.Personalizar(parametros.direcciones["SISTEMA"], parametros.direcciones["COLORES"]);
 			configuracion = new(parametros.direcciones["CONFIGURACION"]);
-			musicaDeFondo.Inicializar(parametros.direcciones["MUSICA_TIENDA"]);
 
 			DireccionRecursos direccion = new(parametros.direcciones["HISTORIA"], $"CAPITULO{configuracion.LeerCapituloHistoria()}");
 
